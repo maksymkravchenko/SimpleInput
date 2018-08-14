@@ -104,6 +104,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		3F242C422122E629009E1037 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				3FF250F92122A1D800558FA2 /* PasswordValidator.swift */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
 		3FF250A821229E2C00558FA2 = {
 			isa = PBXGroup;
 			children = (
@@ -150,7 +158,7 @@
 		3FF250D021229E7100558FA2 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				3FF250F92122A1D800558FA2 /* PasswordValidator.swift */,
+				3F242C422122E629009E1037 /* Other */,
 				3FF250F82122A17D00558FA2 /* dm */,
 				3FF250E421229EB300558FA2 /* InputProtocol.swift */,
 				3FF250E521229EB300558FA2 /* InputValidation.swift */,

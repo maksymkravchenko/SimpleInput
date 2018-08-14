@@ -6,7 +6,6 @@
 //  Copyright © 2018 globalgames.net. All rights reserved.
 //
 
-import UIKit
 
 ///print(message) for debug mode,
 ///- instance: set to print class name
