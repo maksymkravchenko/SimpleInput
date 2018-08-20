@@ -16,6 +16,11 @@ protocol InputProtocol {
 	var isSecure: Bool { get }
 	var placeholder: String? { get }
 	var keyboard: UIKeyboardType { get }
+	var keyboardAppearance: UIKeyboardAppearance { get }
+	var returnKeyType: UIReturnKeyType { get }
+	var autocorrectionType: UITextAutocorrectionType { get }
+	var spellCheckingType: UITextSpellCheckingType { get }
+	
 	
 	var caption: String { get }
 	var hasCaption: Bool { get }
@@ -27,7 +32,6 @@ protocol InputProtocol {
 	var customAction: (() -> Void)? { get }
 	var customActionTitle: String? { get }
 	var customActionImage: UIImage? { get }
-	
 	
 	
 	
