@@ -14,7 +14,7 @@ s.platform     = :ios, "10.0"
 
 s.source       = { :git => "https://github.com/maksymkravchenko/SimpleInput.git", :tag => "1.0.0" }
 
-s.source_files = "SimpleInput"
+s.source_files = "SimpleInput/SimpleInput"
 
 s.swift_version = "4.1" 
 
