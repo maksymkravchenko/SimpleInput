@@ -10,24 +10,25 @@ import UIKit
 import Bond
 import ReactiveKit
 
-class PasswordInput: InputProtocol {
+public class PasswordInput: InputProtocol {
 	let bag = DisposeBag()
 	
-	let isSecure: Bool = true
+	public let isSecure: Bool = true
 //	let shouldValidate: Bool = true
-	let placeholder: String?
-	var caption: String
-	var warningText: String?
+	public let placeholder: String?
+	public var caption: String
+	public var warningText: String?
 
-	let input: Observable<String?> = Observable(nil)
-	let isValid: Observable<Bool> = Observable(true)
-	let isEnabled: Observable<Bool> = Observable(true)
+	public let input: Observable<String?> = Observable(nil)
+	public let isValid: Observable<Bool> = Observable(true)
+	public let isEnabled: Observable<Bool> = Observable(true)
 	
-	var endEditingCompletion: (() -> Void)?
-	var validationHandler: ((String?) -> Bool)?
+	public var endEditingCompletion: (() -> Void)?
+	public var validationHandler: ((String?) -> Bool)?
+	public var shouldValidateOnKeyboardHide: Bool { return false }
+
 	
-	
-	init(caption: String, placeholder: String?, warningText: String?, isEnabled: Bool, validationHandler: ((String?) -> Bool)?) {
+	public init(caption: String, placeholder: String?, warningText: String?, isEnabled: Bool, validationHandler: ((String?) -> Bool)?) {
 		self.caption = caption
 		self.placeholder = placeholder
 		self.isEnabled.value = isEnabled
@@ -40,13 +41,10 @@ class PasswordInput: InputProtocol {
 		}.dispose(in: bag)
 	}
 	
-	func validate(text: String?) -> Bool {
+	public func validate(text: String?) -> Bool {
 		
 		return (validationHandler?(text) ?? true) && PasswordValidator().validate(text)
 	}
-	
-	var shouldValidateOnKeyboardHide: Bool { return false }
-
 }
 
 

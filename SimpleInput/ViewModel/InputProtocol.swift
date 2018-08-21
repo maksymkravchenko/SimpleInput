@@ -9,7 +9,7 @@
 import UIKit
 import Bond
 
-protocol InputProtocol {
+public protocol InputProtocol {
 	
 	//UI values
 	var autocapitalizationType: UITextAutocapitalizationType { get }
@@ -20,7 +20,6 @@ protocol InputProtocol {
 	var returnKeyType: UIReturnKeyType { get }
 	var autocorrectionType: UITextAutocorrectionType { get }
 	var spellCheckingType: UITextSpellCheckingType { get }
-	
 	
 	var caption: String { get }
 	var hasCaption: Bool { get }
@@ -68,14 +67,12 @@ protocol InputProtocol {
 	var endEditingCompletion: (() -> Void)? { get set }
 	var validateOnEditing: Bool { get }
 	
-	
-	
 }
 
 
 //MARK: - Default values
-extension InputProtocol {
-	
+public extension InputProtocol {
+	//Default values
 	var inputValue: String? { return nil }
 	var isValidValue: Bool { return true }
 	var isEnabledValue: Bool { return true }
@@ -88,27 +85,30 @@ extension InputProtocol {
 	var customAction: (() -> Void)? { return nil }
 	var customActionTitle: String? { return nil }
 	var customActionImage: UIImage? { return nil }
+	
+	
+	var autocapitalizationType: UITextAutocapitalizationType { return .none }
+	var hasCaption: Bool { return true }
+	var keyboard: UIKeyboardType { return .default }
+	var shouldValidateOnKeyboardHide: Bool { return true }
+	
+	var keyboardAppearance: UIKeyboardAppearance { return .default }
+	var returnKeyType: UIReturnKeyType { return .default }
+	var autocorrectionType: UITextAutocorrectionType { return .no }
+	var spellCheckingType: UITextSpellCheckingType { return .no }
 
 }
 
-extension InputProtocol {
+public extension InputProtocol {
 	
-	var autocapitalizationType: UITextAutocapitalizationType { return .none }
-
-	var hasCaption: Bool { return true }
-	var keyboard: UIKeyboardType { return .default }
-
-	var shouldValidateOnKeyboardHide: Bool { return true }
-	
-	func validate() {
+	public func validate() {
 		self.isValid.value = validate(text: input.value)
 	}
 
-	func validate(text: String?) -> Bool {
+	public func validate(text: String?) -> Bool {
 		return validationHandler?(text) ?? true
 	}
 	
-	var isEmpty: Bool {
-		return input.value == nil || input.value!.isEmpty
-	}
+//	public var isEmpty: Bool { return inputValue == nil || inputValue!.isEmpty }
+	public var isEmpty: Bool { return input.value == nil || input.value!.isEmpty }
 }
