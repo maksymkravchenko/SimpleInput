@@ -30,7 +30,6 @@
 		3FF250F52122A05400558FA2 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF250F42122A05400558FA2 /* UIColor+Extensions.swift */; };
 		3FF250F72122A0B200558FA2 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF250F62122A0B200558FA2 /* Logger.swift */; };
 		3FF250FA2122A1D800558FA2 /* PasswordValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF250F92122A1D800558FA2 /* PasswordValidator.swift */; };
-		D2A3008893D27A8927010460 /* Pods_SimpleInput.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 835EA029C018783DF8BEBBFC /* Pods_SimpleInput.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,7 +43,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		23ADCABF64B4EE0276D50422 /* Pods-SimpleInput.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleInput.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleInput/Pods-SimpleInput.release.xcconfig"; sourceTree = "<group>"; };
 		3FF250B221229E2C00558FA2 /* SimpleInput.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SimpleInput.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FF250B521229E2C00558FA2 /* SimpleInput.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleInput.h; sourceTree = "<group>"; };
 		3FF250B621229E2C00558FA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -71,8 +69,6 @@
 		3FF250F42122A05400558FA2 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		3FF250F62122A0B200558FA2 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		3FF250F92122A1D800558FA2 /* PasswordValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordValidator.swift; sourceTree = "<group>"; };
-		52DC7A3DCE78F3EB679812AB /* Pods-SimpleInput.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleInput.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleInput/Pods-SimpleInput.debug.xcconfig"; sourceTree = "<group>"; };
-		835EA029C018783DF8BEBBFC /* Pods_SimpleInput.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleInput.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +76,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D2A3008893D27A8927010460 /* Pods_SimpleInput.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,15 +90,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		294C3A13768C884055BDAC99 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				52DC7A3DCE78F3EB679812AB /* Pods-SimpleInput.debug.xcconfig */,
-				23ADCABF64B4EE0276D50422 /* Pods-SimpleInput.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		3F242C422122E629009E1037 /* Other */ = {
 			isa = PBXGroup;
 			children = (
@@ -118,7 +104,6 @@
 				3FF250B421229E2C00558FA2 /* SimpleInput */,
 				3FF250BF21229E2C00558FA2 /* SimpleInputTests */,
 				3FF250B321229E2C00558FA2 /* Products */,
-				294C3A13768C884055BDAC99 /* Pods */,
 				8F16551630262DF076B28EF7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -197,7 +182,6 @@
 		8F16551630262DF076B28EF7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				835EA029C018783DF8BEBBFC /* Pods_SimpleInput.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -220,7 +204,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3FF250C621229E2C00558FA2 /* Build configuration list for PBXNativeTarget "SimpleInput" */;
 			buildPhases = (
-				121EE4D3D9DB42DA08F40DFF /* [CP] Check Pods Manifest.lock */,
 				3FF250AD21229E2C00558FA2 /* Sources */,
 				3FF250AE21229E2C00558FA2 /* Frameworks */,
 				3FF250AF21229E2C00558FA2 /* Headers */,
@@ -309,27 +292,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		121EE4D3D9DB42DA08F40DFF /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-SimpleInput-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3FF250AD21229E2C00558FA2 /* Sources */ = {
@@ -497,7 +459,6 @@
 		};
 		3FF250C721229E2C00558FA2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 52DC7A3DCE78F3EB679812AB /* Pods-SimpleInput.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -524,7 +485,6 @@
 		};
 		3FF250C821229E2C00558FA2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 23ADCABF64B4EE0276D50422 /* Pods-SimpleInput.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
