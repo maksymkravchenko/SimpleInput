@@ -75,7 +75,7 @@ extension String {
 			let offset : Int = length  - count
 			let endIndex = index(self.endIndex, offsetBy: offset)
 //			result = String(result[startIndex..<endIndex])
-			result = substring(to: endIndex)
+			result = String(prefix(upTo: endIndex))
 		}
 		return result
 	}
